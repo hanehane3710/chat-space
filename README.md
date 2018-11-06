@@ -1,17 +1,15 @@
-# README
-
-** membersテーブル
+## membersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-*** Association
+### Association
 - belongs_to :group
 - belongs_to :user
 
-** usersテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -19,14 +17,14 @@
 |email|string|null: false|
 |password|string|null: false|
 
-** groupsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |leader|boolean|
 
-** messagesテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -35,7 +33,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-*** Association
+### Association
 - belongs_to :user
 - belongs_to :user
 
