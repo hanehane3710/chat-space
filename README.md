@@ -14,6 +14,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|user_image|text|
 |email|string|null: false|
 |password|string|null: false|
 
