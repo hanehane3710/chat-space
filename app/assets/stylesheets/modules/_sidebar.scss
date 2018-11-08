@@ -1,0 +1,43 @@
+.sidebar{
+  float:left;
+  width: 300px;
+  height: 100%;
+  &__header{
+    line-height: 100px;
+    background-color: #253141;
+    height:100px;
+    h2{
+      font-weight: bold;
+
+      padding: 0 20px;
+      float: left;
+      color: $font-white;
+      font-size:16px;
+    }
+    .list{
+    }
+    & span{
+      padding: 0 5px 0 0;
+      color: $font-white;
+      float:right;
+    }
+    .icon__cog span{
+      padding-right: 15px;
+    }
+  }
+  &__groups{
+    height: calc(100% - 100px);
+    background-color: #2f3e51;
+
+    &__comment h4{
+      padding:20px 20px 5px;
+      color: $font-white;
+      font-size: 15px;
+    }
+    &__comment p{
+      padding:0 20px 40px;
+      color: $font-white;
+      font-size: 11px
+    }
+  }
+}

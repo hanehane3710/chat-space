@@ -1,0 +1,61 @@
+.container
+  .sidebar
+    .sidebar__header
+      .sidebar__header__name
+        %h2 hanehane
+      %ul.sidebar__header__lists
+        %li.list.icon__cog
+          %span= fa_icon "cog"
+        %li.list
+          %span= fa_icon "pencil-square-o"
+    .sidebar__groups
+      .sidebar__groups__comment
+        %h4 ggg
+        %p 招待ありがとうございます
+      .sidebar__groups__comment
+        %h4 aaa
+        %p 招待ありがとうございます
+      .sidebar__groups__comment
+        %h4 ddd
+        %p 招待ありがとうございます
+
+  .messages
+    .messages__header
+      .messages__header__left
+        %h2 hanehane_group
+        %p Member : hanehane
+      .messages__header__right
+        %a.messages__header__right__edit{href: "#",alt: "Edit"}
+          Edit
+    .messages__body
+      .messages__padding
+      .messages__body__message__infomation
+        %span.name hanehane
+        %span.date 2018/11/06 07:59
+        %br
+        %p 頭が痛い
+      .messages__body__message__infomation
+        %span.name hanehane
+        %span.date 2018/11/06 07:59
+        %br
+        %p 頭が痛い
+
+
+    .textform
+      .textform__form
+        %form
+          %ul
+            %li
+              %input.textform__form__message{:type => "text"}
+            %li
+              .textform__form__icon__space
+                %label.icon__label{for: "name1"}=fa_icon "picture-o"
+                %input.icon__hidden{type: "file", id: "name1"}
+            %li
+              %input.textform__form__button{type: "submit",value: "SEND"}
+
+
+
+
+
+

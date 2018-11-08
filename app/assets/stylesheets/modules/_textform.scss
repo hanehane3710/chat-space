@@ -1,0 +1,43 @@
+.textform{
+    height: 100px;
+    background-color:#DDDDDD;
+    position:absolute;
+    bottom: 0;
+    right:0;
+    left:300px;
+    &__form{
+      padding:20px 40px;
+      &__message{
+        height:50px;
+        width:calc(100% - 200px);
+        float:left;
+        background-color:white;
+        float:left;
+        border: none;
+      }
+      &__icon__space{
+        border: none;
+        padding-left:10px;
+        height:50px;
+        width:40px;
+        margin:0 auto;
+        float:left;
+        background-color:white;
+      }
+      .icon__label{
+        line-height: 50px;
+      }
+      .icon__hidden{
+        display:none;
+      }
+      &__button{
+        color:white;
+        width: 100px;
+        margin-left:15px;
+        height:50px;
+        float:left;
+        background-color:#38AEF0;
+        float:left;
+      }
+    }
+  }
