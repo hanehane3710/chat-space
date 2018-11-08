@@ -48,10 +48,9 @@
             %li
               %input.textform__form__message{:type => "text"}
             %li
-              / %input.textform__form__file{:type => "file"}
-              / %label
-              /   %span.textform--icon{:title => "ファイルを選択"}
-              /     %img{:src => "= fa_icon "cog" "}
+              .icon__space
+                %label.file__form__icon{for: "name1"}=fa_icon "picture-o"
+                %input.file__form__format{type: "file", id: "name1"}
             %li
               %input.textform__form__button{type: "submit",value: "SEND"}
 
