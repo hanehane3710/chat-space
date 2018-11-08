@@ -1,0 +1,28 @@
+.textform{
+    height: 100px;
+    background-color:#DDDDDD;
+    position:absolute;
+    bottom:0;
+    right:0;
+    left:300px;
+    .textform__form{
+      padding:20px 40px;
+      .textform__form__message{
+        height:50px;
+        width:calc(100% - 150px);
+        float:left;
+        background-color:white;
+      }
+      // .textform__form__file{
+      //   float:right;
+      // }
+      .textform__form__button{
+        color:white;
+        width: 100px;
+        margin-left:15px;
+        height:50px;
+        float:left;
+        background-color:#38AEF0;
+      }
+    }
+  }

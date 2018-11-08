@@ -1,0 +1,9 @@
+.messages{
+  width:auto;
+  background-color: $background-gray;
+  height: 100vh;
+  .messages__header{
+    height: 100px;
+    background-color: white;
+  }
+}
