@@ -9,13 +9,13 @@
         %li.list
           %span= fa_icon "pencil-square-o"
     .sidebar__groups
-      .sidebar__group__comment
+      .sidebar__groups__comment
         %h4 ggg
         %p 招待ありがとうございます
-      .sidebar__group__comment
+      .sidebar__groups__comment
         %h4 aaa
         %p 招待ありがとうございます
-      .sidebar__group__comment
+      .sidebar__groups__comment
         %h4 ddd
         %p 招待ありがとうございます
 
@@ -48,9 +48,9 @@
             %li
               %input.textform__form__message{:type => "text"}
             %li
-              .icon__space
-                %label.file__form__icon{for: "name1"}=fa_icon "picture-o"
-                %input.file__form__format{type: "file", id: "name1"}
+              .textform__form__icon__space
+                %label.icon__label{for: "name1"}=fa_icon "picture-o"
+                %input.icon__hidden{type: "file", id: "name1"}
             %li
               %input.textform__form__button{type: "submit",value: "SEND"}
 

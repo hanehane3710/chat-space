@@ -2,10 +2,10 @@
   width:auto;
   background-color: $background-gray;
   height: 100vh;
-  .messages__header{
+  &__header{
     height: 100px;
     background-color: white;
-    .messages__header__left{
+    &__left{
       float:left;
       h2{
         padding:35px 0 0 40px;
@@ -18,7 +18,7 @@
         color: #999999;
       }
     }
-    .messages__header__right{
+    &__right{
       text-align: center;
       margin:28px 40px;
       float:right;
@@ -32,13 +32,13 @@
       }
     }
   }
-  .messages__body{
+  &__body{
     background-color: #FAFAFA;
     height:calc(100% - 200px);
     .messages__padding{
       padding-top:46px;
     }
-    .messages__body__message__infomation{
+    &__message__infomation{
       .name{
         font-weight: bold;
         padding:35px 0 0 40px;
