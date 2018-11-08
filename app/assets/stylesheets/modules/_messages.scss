@@ -5,5 +5,55 @@
   .messages__header{
     height: 100px;
     background-color: white;
+    .messages__header__left{
+      float:left;
+      h2{
+        padding:35px 0 0 40px;
+        font-size: 20px;
+        color: $messages-font-color;
+      }
+      p{
+        padding:15px 0 0 40px;
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    .messages__header__right{
+      text-align: center;
+      margin:28px 40px;
+      float:right;
+      height: 40px;
+      width: 80px;
+      border:1px solid $color-blue;
+      a{
+        text-decoration: none;
+        line-height: 40px;
+        color: $color-blue;
+      }
+    }
   }
+  .messages__body{
+    background-color: #FAFAFA;
+    height:calc(100% - 200px);
+    .messages__padding{
+      padding-top:46px;
+    }
+    .messages__body__message__infomation{
+      .name{
+        font-weight: bold;
+        padding:35px 0 0 40px;
+        font-size: 16px;
+        color: $messages-font-color;
+      }
+      .date{
+        font-size: 12px;
+        color: #999999;
+      }
+       p{ display: inline-block;
+          padding:10px 0 40px 40px;
+          font-size: 14px;
+          color: $messages-font-color;
+        }
+      }
+    }
 }

@@ -21,8 +21,25 @@
 
   .messages
     .messages__header
-
+      .messages__header__left
+        %h2 hanehane_group
+        %p Member : hanehane
+      .messages__header__right
+        %a.messages__header__right__edit{href: "#",alt: "Edit"}
+          Edit
     .messages__body
+      .messages__padding
+      .messages__body__message__infomation
+        %span.name hanehane
+        %span.date 2018/11/06 07:59
+        %br
+        %p 頭が痛い
+      .messages__body__message__infomation
+        %span.name hanehane
+        %span.date 2018/11/06 07:59
+        %br
+        %p 頭が痛い
+
 
     .textform
       .textform__form
@@ -36,7 +53,7 @@
               /   %span.textform--icon{:title => "ファイルを選択"}
               /     %img{:src => "= fa_icon "cog" "}
             %li
-              %input.textform__form__button{:type => "submit",:value => "SEND"}
+              %input.textform__form__button{type: "submit",value: "SEND"}
 
 
 
