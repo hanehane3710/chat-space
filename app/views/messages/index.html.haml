@@ -1,8 +1,23 @@
 .container
   .sidebar
     .sidebar__header
-      = fa_icon "cog"
-    .sidebar__group
+      %h3.sidebar__header__name
+        %h2 hanehane
+      %ul.sidebar__header__lists
+        %li.list.icon__cog
+          %span= fa_icon "cog"
+        %li.list
+          %span= fa_icon "pencil-square-o"
+    .sidebar__groups
+      .sidebar__group__comment
+        %h4 ggg
+        %p 招待ありがとうございます
+      .sidebar__group__comment
+        %h4 aaa
+        %p 招待ありがとうございます
+      .sidebar__group__comment
+        %h4 ddd
+        %p 招待ありがとうございます
 
   .messages
     .messages__header
@@ -10,6 +25,19 @@
     .messages__body
 
     .textform
+      .textform__form
+        %form
+          %ul
+            %li
+              %input.textform__form__message{:type => "text"}
+            %li
+              / %input.textform__form__file{:type => "file"}
+              / %label
+              /   %span.textform--icon{:title => "ファイルを選択"}
+              /     %img{:src => "= fa_icon "cog" "}
+            %li
+              %input.textform__form__button{:type => "submit",:value => "SEND"}
+
 
 
 
