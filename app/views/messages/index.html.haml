@@ -10,16 +10,13 @@
         %li.list
           = link_to new_group_path,class: "icon" do
             = fa_icon "pencil-square-o"
+
     .sidebar__groups
       .sidebar__groups__comment
-        %h4
-        %p 招待ありがとうございます
-      .sidebar__groups__comment
-        %h4 aaa
-        %p 招待ありがとうございます
-      .sidebar__groups__comment
-        %h4 ddd
-        %p 招待ありがとうございます
+        - current_user.groups.each do |group|
+          = link_to group_messages_path(group) do
+            %h4=group.name
+            %p=group.show_last_message
 
   .messages
     .messages__header
