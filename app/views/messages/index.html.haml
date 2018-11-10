@@ -10,7 +10,7 @@
           %span= fa_icon "pencil-square-o"
     .sidebar__groups
       .sidebar__groups__comment
-        %h4 ggg
+        %h4
         %p 招待ありがとうございます
       .sidebar__groups__comment
         %h4 aaa
@@ -22,24 +22,13 @@
   .messages
     .messages__header
       .messages__header__left
-        %h2 hanehane_group
-        %p Member : hanehane
+        %h2=@group.name
+
       .messages__header__right
         %a.messages__header__right__edit{href: "#",alt: "Edit"}
           Edit
     .messages__body
-      .messages__padding
-      .messages__body__message__infomation
-        %span.name hanehane
-        %span.date 2018/11/06 07:59
-        %br
-        %p 頭が痛い
-      .messages__body__message__infomation
-        %span.name hanehane
-        %span.date 2018/11/06 07:59
-        %br
-        %p 頭が痛い
-
+      = render @messages
 
     .textform
       .textform__form
