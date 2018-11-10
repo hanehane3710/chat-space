@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
+  before_action :set_current_user, only: :edit
+
   def edit
-    @user = User.find(current_user.id)
   end
 
   def update
-    if @user = User.find(current_user.id)
+    if set_current_user
       @user.update(user_params)
       redirect_to root_url
     else
@@ -13,6 +14,10 @@ class UsersController < ApplicationController
   end
 
    private
+    def set_current_user
+      @user = User.find(current_user.id)
+    end
+
     def user_params
       params.require(:users).permit(:name,:email)
     end

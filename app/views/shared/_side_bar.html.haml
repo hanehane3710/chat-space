@@ -1,0 +1,21 @@
+.sidebar
+    .sidebar__header
+      .sidebar__header__name
+        = current_user.name
+      %ul.sidebar__header__lists
+        %li.list.icon__cog
+          = link_to new_group_path do
+            = fa_icon "cog", class: "icon__cog"
+        %li.list
+          = link_to edit_user_path(current_user) dp
+            = fa_icon "pencil-square-o"
+    .sidebar__groups
+      .sidebar__groups__comment
+        %h4 =group.name
+        %p =新着メッセージ
+      .sidebar__groups__comment
+        %h4 =group.name
+        %p =新着メッセージ
+      .sidebar__groups__comment
+        %h4 =group.name
+        %p =新着メッセージ
