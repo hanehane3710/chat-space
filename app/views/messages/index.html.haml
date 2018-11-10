@@ -43,19 +43,14 @@
 
     .textform
       .textform__form
-        / %form
         = form_for [@group, @message] do |f|
           %ul
             %li
-              / %input.textform__form__message{:type => "text"}
               = f.text_field :message, class: "textform__form__message", placeholder: "type a message"
             %li
               .textform__form__icon__space
-                / %label.icon__label{for: "name1"}=fa_icon "picture-o"
                 = f.label :image do
                   = fa_icon 'picture-o', class: 'icon__label'
                   = f.file_field :image, class: 'icon__hidden'
-                / %input.icon__hidden{type: "file", id: "name1"}
             %li
-              / %input.textform__form__button{type: "submit",value: "SEND"}
               = f.submit "SEND", class: "textform__form__button"
