@@ -57,3 +57,6 @@ gem 'haml-rails'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'pry-rails'
+#画像ファイル
+gem 'carrierwave'
+gem 'mini_magick'

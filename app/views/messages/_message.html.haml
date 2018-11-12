@@ -1,0 +1,9 @@
+.messages__padding
+  .messages__body__message__infomation
+    %span.name=message.user.name
+    %span.date=message.created_at
+    %br
+    - if message.message.present?
+      %p=message.message
+    =image_tag message.image.url if message.image.present?
+    %br

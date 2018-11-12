@@ -3,4 +3,8 @@ class Message < ApplicationRecord
   belongs_to :group
 
   validates :message, presence: true, unless: :image?
-end
+  mount_uploader :image, ImageUploader
+
+
+  end
+
