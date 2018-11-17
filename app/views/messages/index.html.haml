@@ -27,7 +27,16 @@
         %a.messages__header__right__edit{href: "#",alt: "Edit"}
           Edit
     .messages__body
-      = render @messages
+      .messages__padding
+        .messages__body__message__infomation
+          - @messages.each do |message|
+            %span.name=message.user.name
+            %span.date=message.created_at
+            %br
+            - if message.message.present?
+              %p=message.message
+            =image_tag message.image.url if message.image.present?
+            %br
 
     .textform
       .textform__form
