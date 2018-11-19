@@ -35,7 +35,9 @@
             %br
             - if message.message.present?
               %p=message.message
-            =image_tag message.image.url if message.image.present?
+            - if message.image.present?
+              %br
+              =image_tag message.image.url ,class: "image"
             %br
 
     .textform

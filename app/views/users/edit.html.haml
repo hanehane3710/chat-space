@@ -1,10 +1,10 @@
 #account-page.account-page
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
-      %h2 Create Account
-      %h5 新規アカウントの作成
+      %h2 Edit Account
+      %h5 アカウントの編集
       =link_to "ログアウト", destroy_user_session_path,method: :delete, class: 'btn'
-      =link_to "トップページに戻る", root_path, class: 'btn'
+      =link_to "トップページに戻る",group_messages_path(current_user), class: 'btn'
       / = render "devise/shared/links"
     .account-page__inner--right.user-form
       = form_for(@user) do |f|
@@ -31,4 +31,4 @@
           .field-input
             = f.password_field :password_confirmation, autocomplete: "off"
         .actions
-          = f.submit "Create Account", class: 'btn'
+          = f.submit "Update", class: 'btn'
