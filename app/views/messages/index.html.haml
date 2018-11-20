@@ -21,34 +21,40 @@
   .messages
     .messages__header
       .messages__header__left
-        %h2=@group.name
+        .messages__header__left__group-name
+          =@group.name
+        %ul.messages__header__left__members
+          %li.member
+            Member :
+          -@group.users.each do |user|
+            %li.member
+              =user.name
 
       .messages__header__right
         =link_to "Edit",edit_group_path(@group), alt: "Edit",class: "messages__header__right__edit"
     .messages__body
-      .messages__padding
-        .messages__body__message__infomation
-          - @messages.each do |message|
-            %span.name=message.user.name
-            %span.date=message.created_at
-            %br
-            - if message.message.present?
-              %p=message.message
-            - if message.image.present?
-              %br
-              =image_tag message.image.url ,class: "image"
-            %br
+      .messages__body__message__infomation
+        %br
+        - @messages.each do |message|
+          %span.name=message.user.name
+          %span.date=message.created_at
+          %br
+          - if message.message.present?
+            %p=message.message
+          - if message.image.present?
+            =image_tag message.image.url ,class: "image"
+          %br
 
-    .textform
-      .textform__form
+    .form
+      .form__input
         = form_for [@group, @message] do |f|
           %ul
             %li
-              = f.text_field :message, class: "textform__form__message", placeholder: "type a message"
+              = f.text_field :message, class: "form__input__message", placeholder: "type a message"
             %li
-              .textform__form__icon__space
+              .form__input__icon__space
                 = f.label :image do
-                  = fa_icon 'picture-o', class: 'icon__label'
+                  = fa_icon 'picture-o',class: 'icon__label fa-lg'
                   = f.file_field :image, class: 'icon__hidden'
             %li
-              = f.submit "SEND", class: "textform__form__button"
+              = f.submit "SEND", class: "form__input__button"
