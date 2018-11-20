@@ -2,10 +2,10 @@
   .sidebar
     .sidebar__header
       .sidebar__header__name
-        %h2 hanehane
+        %h2=current_user.name
       %ul.sidebar__header__lists
         %li.list.icon__cog
-          = link_to edit_group_path(@group),class: "icon" do
+          = link_to edit_user_path(current_user.id),class: "icon" do
             = fa_icon "cog"
         %li.list
           = link_to new_group_path,class: "icon" do
@@ -24,8 +24,7 @@
         %h2=@group.name
 
       .messages__header__right
-        %a.messages__header__right__edit{href: "#",alt: "Edit"}
-          Edit
+        =link_to "Edit",edit_group_path(@group), alt: "Edit",class: "messages__header__right__edit"
     .messages__body
       .messages__padding
         .messages__body__message__infomation
