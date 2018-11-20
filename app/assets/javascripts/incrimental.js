@@ -7,7 +7,6 @@ $(function(){
     $('.chat-group-form__search').append(html);
       }
   $('#user-search-field').on('keydown',function(){
-    console.log('頭が痛い')
     var input = $("#user-search-field").val();
     $.ajax({
       type: 'GET',
