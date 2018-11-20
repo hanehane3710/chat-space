@@ -5,6 +5,9 @@ class UsersController < ApplicationController
     @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
   end
 
+  def edit
+  end
+
   def update
     if set_current_user
       @user.update(user_params)
