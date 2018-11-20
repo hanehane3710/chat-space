@@ -1,11 +1,11 @@
-.textform{
-    height: 100px;
+.form{
+    height: 90px;
     background-color:#DDDDDD;
     position:absolute;
     bottom: 0;
     right:0;
     left:300px;
-    &__form{
+    &__input{
       padding:20px 40px;
       &__message{
         height:50px;
@@ -14,6 +14,7 @@
         background-color:white;
         float:left;
         border: none;
+        padding:0 10px;
       }
       &__icon__space{
         border: none;
