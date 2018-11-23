@@ -39,7 +39,8 @@ $(function(){
     .fail(function(){
       alert("検索に失敗しました");
     })
-    $('#user-search-result').on("click",".chat-group-user__btn--add",function(){
+ });
+  $('#user-search-result').on("click",".chat-group-user__btn--add",function(){
       var user_data = $(this).data();
        addMember(user_data);
        $(this).parent().remove();
@@ -48,6 +49,5 @@ $(function(){
       $('.chat-group-user').on("click",".chat-group-user__btn--remove",function(){
        $(this).parent().remove();
     })
- });
 });
 
