@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-  before_action :set_current_user, only: :edit
+
+  def index
+    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current_user.id)
+  end
 
   def edit
   end

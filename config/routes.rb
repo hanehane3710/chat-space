@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   # get 'messages/index'
-
   # get 'messages/create'
 
   devise_for :users
-  resources :users, only: [:edit,:update]
+  resources :users, only: [:index,:edit,:update]
   devise_scope :user do
     authenticated :user do
       root :to => 'groups#index', as: :authenticated_root

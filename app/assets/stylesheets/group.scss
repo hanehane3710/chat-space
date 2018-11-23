@@ -88,7 +88,7 @@
       display: block;
     }
 
-    .chat-group-user__name {
+    .chat-group-user__name{
       float: left;
     }
 
@@ -103,6 +103,7 @@
 
       &.chat-group-user__btn--remove {
         color: #f05050;
+        text-decoration: none;
       }
     }
   }
