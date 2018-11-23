@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :set_current_user, only: :edit
 
   def index
     @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
