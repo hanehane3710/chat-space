@@ -32,6 +32,7 @@ $(document).on('turbolinks:load', function() {
       var html = buildHTML(data);
       $('.messages__body__message__infomation').prepend(html);
       $('.form__input__message').val("");
+      $('.icon__hidden').val("");
       $('.form__input__button').prop('disabled',false);
      })
     .fail(function(){
