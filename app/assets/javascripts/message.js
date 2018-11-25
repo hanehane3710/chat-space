@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function() {
       image = `<br>
                <p><img src='${message.image.url}' class="image"></p>`
     }
-    var html =`<br>
+    var html =`
               <div class="message" data-message-id="${message.id}">
               <br>
               <span class="name">${message.user_name}</span>
@@ -30,7 +30,9 @@ $(document).on('turbolinks:load', function() {
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.messages__body__message__infomation').append(html);
+      $('.messages__body__message__infomation').prepend(html);
+      $('.form__input__message').val("");
+      $('.form__input__button').prop('disabled',false);
      })
     .fail(function(){
       alert('error');
@@ -40,9 +42,10 @@ $(document).on('turbolinks:load', function() {
   function buildHTML(message) {
   var image = '';
   if (message.image.url) {
-    image = `<img src="${message.image.url}" class="image">`;
+    image = `<br>
+             <img src="${message.image.url}" class="image">`;
   }
-  var html = `<br>
+  var html = `
               <div class="message" data-message-id="${message.id}">
               <br>
               <span class="name">${message.user_name}</span>
