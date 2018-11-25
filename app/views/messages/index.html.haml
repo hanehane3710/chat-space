@@ -31,19 +31,11 @@
               =user.name
 
       .messages__header__right
-        =link_to "Edit", edit_group_path(@group), alt: "Edit", class: "messages__header__right__edit"
+        =link_to "Edit", edit_group_path(@group), alt: "Edit"
     .messages__body
       .messages__body__message__infomation
         %br
-        - @messages.each do |message|
-          %span.name=message.user.name
-          %span.date=message.created_at
-          %br
-          - if message.message.present?
-            %p=message.message
-          - if message.image.present?
-            =image_tag message.image.url ,class: "image"
-          %br
+        =render @messages
 
     .form
       .form__input
