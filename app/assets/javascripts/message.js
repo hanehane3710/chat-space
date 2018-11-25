@@ -41,12 +41,12 @@ $(document).on('turbolinks:load', function() {
   });
   //自動更新
   function buildHTML(message) {
-  var image = '';
-  if (message.image.url) {
-    image = `<br>
-             <img src="${message.image.url}" class="image">`;
-  }
-  var html = `
+    var image = '';
+    if (message.image) {
+      image = `<br>
+               <img src="${message.image.url}" class="image">`;
+      }
+    var html = `
               <div class="message" data-message-id="${message.id}">
               <br>
               <span class="name">${message.user_name}</span>
@@ -55,8 +55,8 @@ $(document).on('turbolinks:load', function() {
               <p>${message.message}</p>
               ${image}
               </div>`;
-  return html;
-}
+    return html;
+  }
   var interval = setInterval(function() {
       if (window.location.href.match(/\/groups\/\d+\/messages/)) {
     $.ajax({
@@ -67,7 +67,6 @@ $(document).on('turbolinks:load', function() {
       var id = $('.message').data('message-id');
       var html = '';
       messages.forEach(function(message){
-        console.log(message);
         if (message.id > id ) {
           html += buildHTML(message);
         }
