@@ -39,11 +39,11 @@
     }
   }
   &__body{
-    overflow: scroll;
     background-color: #FAFAFA;
-    height:calc(100vh - 200px);
     padding:100px 0;
     &__message__infomation{
+      overflow: scroll;
+      height:calc(100vh - 200px);
       .name{
        font-weight: bold;
        padding:25px 0 0 40px;
