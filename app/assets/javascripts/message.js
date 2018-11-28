@@ -1,9 +1,9 @@
 $(document).on('turbolinks:load', function() {
   function buildHTML(message){
-    var image ="";
+    var image = "";
     if (message.image){
       image = `<br>
-               <p><img src='${message.image.url}' class="image"></p>`
+               <img src="${message.image.url}" class="image">`;
     }
     var html =`
               <div class="message" data-message-id="${message.id}">
@@ -13,8 +13,8 @@ $(document).on('turbolinks:load', function() {
               <br>
               <p>${message.message}</p>
               ${image}
-              </div>`
-     return html;
+              </div>`;
+    return html;
   }
   $('#new_message').on('submit',function(e){
     e.preventDefault();
@@ -42,10 +42,10 @@ $(document).on('turbolinks:load', function() {
   //自動更新
   function buildHTML(message) {
     var image = '';
-    if (message.image) {
+    if (message.image.url) {
       image = `<br>
                <img src="${message.image.url}" class="image">`;
-      }
+    }
     var html = `
               <div class="message" data-message-id="${message.id}">
               <br>
