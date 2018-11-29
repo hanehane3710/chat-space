@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_group
   def index
     @message = Message.new
-    @messages = @group.messages.order("id DESC").includes(:user)
+    @messages = @group.messages.includes(:user)
     respond_to do |format|
       format.html
       format.json

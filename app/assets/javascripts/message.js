@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', function() {
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.messages__body__message__infomation').prepend(html);
+      $('.messages__body__message__infomation').append(html);
       $('.form__input__message').val("");
       $('.icon__hidden').val("");
       $('.form__input__button').prop('disabled',false);
@@ -64,14 +64,14 @@ $(document).on('turbolinks:load', function() {
       dataType: 'json'
     })
     .done(function(messages) {
-      var id = $('.message').data('message-id');
+      var id = $('.message:last').data('message-id');
       var html = '';
       messages.forEach(function(message){
         if (message.id > id ) {
           html += buildHTML(message);
         }
       });
-      $('.messages__body__message__infomation').prepend(html);
+      $('.messages__body__message__infomation').append(html);
     })
     .fail(function(json) {
       alert('自動更新に失敗しました');
