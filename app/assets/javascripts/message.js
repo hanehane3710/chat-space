@@ -16,6 +16,15 @@ $(document).on('turbolinks:load', function() {
               </div>`;
     return html;
   }
+  $(document).ready( function(){
+   if (window.name != "first") {
+     location.reload();
+     window.name = "first";
+   } else {
+     window.name = "";
+   }
+  });
+
   $('#new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -61,7 +70,8 @@ $(document).on('turbolinks:load', function() {
       if (window.location.href.match(/\/groups\/\d+\/messages/)) {
     $.ajax({
       url: location.href.json,
-      dataType: 'json'
+      dataType: 'json',
+      type: 'GET'
     })
     .done(function(messages) {
       var id = $('.message').data('message-id');
