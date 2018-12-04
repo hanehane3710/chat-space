@@ -40,6 +40,7 @@ $(document).on('turbolinks:load', function() {
     .done(function(data){
       var html = buildHTML(data);
       $('.messages__body__message__infomation').append(html);
+      $('.messages__body__message__infomation').animate({scrollTop:$('.messages__body__message__infomation')[0].scrollHeight},'fast');
       $('.form__input__message').val("");
       $('.icon__hidden').val("");
       $('.form__input__button').prop('disabled',false);
@@ -81,7 +82,8 @@ $(document).on('turbolinks:load', function() {
           html += buildHTML(message);
         }
       });
-      $('.messages__body__message__infomation').append(html);
+      $('.messages__body__message__infomation').append(html).animate({scrollTop:$('.messages__body__message__infomation')[0].scrollHeight},'fast');
+      $('.messages__body__message__infomation')
     })
     .fail(function(json) {
       alert('自動更新に失敗しました');
