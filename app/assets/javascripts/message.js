@@ -82,8 +82,7 @@ $(document).on('turbolinks:load', function() {
           html += buildHTML(message);
         }
       });
-      $('.messages__body__message__infomation').append(html).animate({scrollTop:$('.messages__body__message__infomation')[0].scrollHeight},'fast');
-      $('.messages__body__message__infomation')
+      $('.messages__body__message__infomation').append(html);
     })
     .fail(function(json) {
       alert('自動更新に失敗しました');
