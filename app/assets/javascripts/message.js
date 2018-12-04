@@ -37,12 +37,17 @@ $(document).on('turbolinks:load', function() {
       contentType: false
     })
     .done(function(data){
-      var html = buildHTML(data);
-      $('.messages__body__message__infomation').append(html);
-      $('.messages__body__message__infomation').animate({scrollTop:$('.messages__body__message__infomation')[0].scrollHeight},'fast');
-      $('.form__input__message').val("");
-      $('.icon__hidden').val("");
-      $('.form__input__button').prop('disabled',false);
+      console.log(data);
+      if (data.message || data.image){
+        var html = buildHTML(data);
+        $('.messages__body__message__infomation').append(html);
+        $('.messages__body__message__infomation').animate({scrollTop:$('.messages__body__message__infomation')[0].scrollHeight},'fast');
+        $('.form__input__message').val("");
+        $('.icon__hidden').val("");
+        $('.form__input__button').prop('disabled',false);
+      }else{
+        $('.form__input__button').prop('disabled',false);
+      }
      })
     .fail(function(){
       alert('error');
@@ -78,6 +83,7 @@ $(document).on('turbolinks:load', function() {
       messages.forEach(function(message){
         if (message.id > id ) {
           html += buildHTML(message);
+          $('.messages__body__message__infomation').animate({scrollTop:$('.messages__body__message__infomation')[0].scrollHeight},'fast');
         }
       });
       $('.messages__body__message__infomation').append(html);
