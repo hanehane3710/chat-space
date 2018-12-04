@@ -37,7 +37,6 @@ $(document).on('turbolinks:load', function() {
       contentType: false
     })
     .done(function(data){
-      console.log(data);
       if (data.message || data.image){
         var html = buildHTML(data);
         $('.messages__body__message__infomation').append(html);
