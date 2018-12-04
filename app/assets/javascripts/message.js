@@ -7,7 +7,6 @@ $(document).on('turbolinks:load', function() {
     }
     var html =`
               <div class="message" data-message-id="${message.id}">
-              <br>
               <span class="name">${message.user_name}</span>
               <span class="date">${message.created_at}</span>
               <br>
